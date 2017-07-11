@@ -1,0 +1,31 @@
+[
+    {
+        "Timestamp":"2017-07-11T16:34:17.5958685+02:00",
+        "Level":"Information",
+        "MessageTemplate":"Created {@User} on {Created}",
+        "Properties":{
+            "User":{
+                "_typeTag":"User",
+                "Id":1,
+                "Name":"Adam",
+                "Birthday":"0001-01-01T00:00:00.0000000"
+            },
+            "Created":"2017-07-11T16:34:17.5958685+02:00"
+        }
+    },
+    {
+        "Timestamp":"2017-07-11T16:34:17.5958685+02:00",
+        "Level":"Information",
+        "MessageTemplate":"Created {@User} on {Created}",
+        "Properties":{
+            "User":{
+                "_typeTag":"User",
+                "Id":1,
+                "Name":"Adam",
+                "Birthday":"0001-01-01T00:00:00.0000000"
+            },
+            "Created":"2017-07-11T16:34:17.5958685+02:00",
+            "DayOfWeek":"Tuesday"
+        }
+    }
+]

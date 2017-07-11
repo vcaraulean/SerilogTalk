@@ -9,21 +9,23 @@
   <Namespace>Serilog.Formatting.Raw</Namespace>
   <Namespace>Serilog.Sinks.LINQPad</Namespace>
   <Namespace>Serilog.Sinks.SystemConsole.Themes</Namespace>
+  <Namespace>Serilog.Context</Namespace>
 </Query>
 
 class User
 {
 	public int Id { get; set; }
 	public string Name { get; set; }
-	public DateTime Created { get; set; }
+	public DateTime Birthday { get; set; }
 }
 
 void Main()
 {
 	var log = new LoggerConfiguration()
-	.WriteTo.LINQPad()
-	.CreateLogger();
+		.WriteTo.LINQPad()
+		.CreateLogger();
 
-	var exampleUser = new User { Id = 1, Name = "Adam", Created = DateTime.Now };
+	var exampleUser = new User { Id = 1, Name = "Adam", Birthday = DateTime.MinValue };
+
 	log.Information("Created {@User} on {Created}", exampleUser, DateTime.Now);
 }
