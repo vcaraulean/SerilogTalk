@@ -1,0 +1,9 @@
+select names() from stream where Env='Development'
+
+select count(*) from stream where App = 'MyApp' group by @Level, time(1h)
+
+select count(*) as count
+from stream 
+where Has(@Exception) or @Level = 'Error' or @Level = 'Fatal' or @Level = 'Critical'
+group by time(30s)
+limit 10000
